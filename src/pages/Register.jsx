@@ -35,7 +35,7 @@ function Register() {
     await api
       .get(`/users/${userId}`)
       .then((response) => {
-        setFormData(response.data.data);
+        setFormData(response.data);
         setIsLoading(false);
       })
       .catch((error) => {

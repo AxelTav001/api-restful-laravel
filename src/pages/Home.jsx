@@ -49,14 +49,14 @@ function Home() {
 
   useEffect(() => {
     if (totalUsers !== users.length) {
-      adjustCurrentPage();
+      fixCurrentPage();
     }
   }, [totalUsers]);
 
-  const adjustCurrentPage = () => {
+  const fixCurrentPage = () => {
     //Arredonda pra cima
     let maxNumPage = Math.ceil(totalUsers / numUsersPerPage);
-
+    
     if (currentPage > maxNumPage) {
       setCurrentPage(currentPage - 1);
     }

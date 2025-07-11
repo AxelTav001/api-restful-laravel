@@ -7,9 +7,16 @@ export function formatDate(inputDate) {
   if (!inputDate) {
     return false;
   }
-
-  // Divide a string YYYY-MM-DD
+ 
+  // Divide a string (data no formato: YYYY-MM-DD ) 
   const [year, month, day] = inputDate.split("-");
+
+  // Extrai ano, mês e dia da string (data no formato: YYYYMMDD)
+  // const dataString = inputDate.toString(); 
+  // const year = dataString.substring(0, 4);
+  // const month = dataString.substring(4, 6);
+  // const day = dataString.substring(6, 8);
+
   // Cria a data como local (mês é 0-indexado no Date)
   const date = new Date(Number(year), Number(month) - 1, Number(day));
 

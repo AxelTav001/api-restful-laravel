@@ -19,7 +19,6 @@ function BoxUser({ user, users, setUsers, totalUsers, setTotalUsers }) {
       .delete(`/users/${userId}`)
       .then((response) => {
         // console.log(response);
-        // setUsers(response.data);
         setUsers(users.filter((user) => user.id !== userId));
         setTotalUsers(totalUsers - 1);
         setIsLoading(false);
